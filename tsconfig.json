@@ -1,34 +1,14 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "paths": {
-      "cdp4-sdkts": [
-        "dist/cdp4-sdkts"
-      ],
-      "cdp4-sdkts/*": [
-        "dist/cdp4-sdkts/*"
-      ]
-    }
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "strictPropertyInitialization": false, // Added in Typescript 2.7 TODO Decide in the future once we want to comply with lint and this flag being true
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true
   },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"]
 }
