@@ -12,6 +12,11 @@ module.exports = function (config) {
     ],
     files: [
       {pattern: "src/**/*.ts"},
+      { pattern: './src/json-serializer/test-data/jsonSerializerData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/siteDirectoryData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/rdlData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/iterationData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/emailResponseData.js', included: true, served: true, watched: false, nocache: false },
     ],
     preprocessors: {
       "**/*.ts": ["karma-typescript"],

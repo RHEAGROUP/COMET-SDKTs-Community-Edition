@@ -1,6 +1,6 @@
 {
   "name": "cdp4-sdkts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Concurrent Design Platform Typescript Software Development Kit that is compliant with ECSS-E-TM-10-25 Annex A and Annex C",
   "license": "LGPL-3.0",
   "repository": {
@@ -21,7 +21,11 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@commite/ajax-client": "^0.3.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.3"
+  },
   "devDependencies": {
     "@types/jasmine": "~3.3.8",
     "jasmine-core": "~3.4.0",

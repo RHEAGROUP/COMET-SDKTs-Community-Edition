@@ -5,9 +5,12 @@
     "declaration": true,
     "outDir": "./lib",
     "strict": true,
-    "strictPropertyInitialization": false, // Added in Typescript 2.7 TODO Decide in the future once we want to comply with lint and this flag being true
+    // TODO Revise parameters below, they are basically workarounds of the existing potential problems
+    // in the generated code. Ideally all of them should be deleted to have the default parameters of TS compiler.
+    "strictPropertyInitialization": false,
     "strictNullChecks": false,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "src/**/*.spec.ts"]
