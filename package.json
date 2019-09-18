@@ -22,7 +22,6 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "@commite/ajax-client": "^0.3.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.3"
   },

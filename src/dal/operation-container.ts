@@ -26,7 +26,7 @@ export class OperationContainer {
     public topContainerRevisionNumber: number;
 
     /**
-     * Initializes a new instance of the WebServiceClient class.
+     * Initializes a new instance of the OperationContainer class.
      * @param contextRoute The route of the SiteDirectory or Iteration for which the current OperationContainer is valid.
      * @param topContainerRevNumber The unique TopContainer.RevisionNumber in this OperationContainer
      */
