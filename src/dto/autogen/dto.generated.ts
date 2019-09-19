@@ -1,7 +1,7 @@
 ﻿/**
  * @file		dto.generated.ts
  * @company		RHEA System S.A.
- * @copyright	Copyright (c) 2017 RHEA System S.A.
+ * @copyright  Copyright (c) 2019  RHEA System S.A.
  * @summary		This is an auto-generated class. Any manual changes on this file will be overwritten!
  */
 

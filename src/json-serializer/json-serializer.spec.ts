@@ -1,7 +1,7 @@
 ﻿/**
  * @file    json-serializer.spec.ts
  * @company     RHEA System S.A.
- * @copyright  Copyright (c) 2017  RHEA System S.A.
+ * @copyright  Copyright (c) 2019  RHEA System S.A.
  */
 
 import {Cdp4JsonSerializer} from "./autogen/thing-serializers.generated";

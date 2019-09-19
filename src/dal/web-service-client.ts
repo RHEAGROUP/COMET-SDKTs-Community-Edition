@@ -1,7 +1,7 @@
 ﻿/**
  * @file    web-service-client.ts
  * @company     RHEA System S.A.
- * @copyright  Copyright (c) 2017  RHEA System S.A.
+ * @copyright  Copyright (c) 2019  RHEA System S.A.
  */
 
 import {Observable} from 'rxjs';
@@ -19,6 +19,7 @@ export class WebServiceClient {
 
   /**
    * Initializes a new instance of the WebServiceClient class.
+   * @param cdpVersion An acceptable CDP version by this application.
    */
   constructor(cdpVersion: string) {
     this.cdpVersion = cdpVersion;
@@ -27,15 +28,16 @@ export class WebServiceClient {
   /**
    * Performs a GET request on a specified route.
    * @param route The route for the request.
+   * @param responseType The response type that is expected to be returned from API endpoint.
    */
-  public get(route: string): Observable<AjaxResponse> {
+  public get(route: string, responseType: string = 'json'): Observable<AjaxResponse> {
     return ajax({
       url: route,
       method: 'GET',
       headers: {
         'Accept-CDP': this.cdpVersion
       },
-      responseType: 'json'
+      responseType: responseType
     });
   }
 

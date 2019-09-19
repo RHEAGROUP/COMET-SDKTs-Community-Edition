@@ -1,7 +1,7 @@
 ﻿/**
  * @file    model-contained.helper.generated.ts
  * @company     RHEA System S.A.
- * @copyright  Copyright (c) 2017  RHEA System S.A.
+ * @copyright  Copyright (c) 2019  RHEA System S.A.
  */
 
 import {Dto} from "../../dto/autogen/dto.generated";
