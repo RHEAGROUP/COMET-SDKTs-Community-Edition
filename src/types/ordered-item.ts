@@ -1,7 +1,7 @@
 ﻿/**
  * @file		ordered-item.ts
  * @company		 RHEA System S.A.
- * @copyright	Copyright (c) 2017  RHEA System S.A.
+ * @copyright	Copyright (c) 2019  RHEA System S.A.
  */
 
 /**
