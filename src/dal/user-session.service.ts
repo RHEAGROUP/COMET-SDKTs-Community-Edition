@@ -18,6 +18,7 @@ import {QueryAttributes} from './query-attributes';
 import {Session} from './session';
 import {concatAll, map} from 'rxjs/operators';
 import {throwError} from 'rxjs/internal/observable/throwError';
+import {Dal} from './dal';
 
 /**
  * The userSession service communicates with the data-source and orchestrates updating the DTO cache.
@@ -48,7 +49,7 @@ export class UserSessionService implements Session {
    * The Data Access Layer interface for CDP4 ECSS-E-TM-10-25
    * Annex C, REST API.
    */
-  private readonly cdpServiceDal: CdpServicesDal;
+  private readonly dal: Dal;
 
   /**
    * The service to pass around updated Things.
@@ -72,12 +73,12 @@ export class UserSessionService implements Session {
 
   /**
    * The constructor of the userSession service.
-   * @param cdpServiceDal The DAL.
+   * @param dal The DAL.
    * @param thingUpdateService The injected ThingUpdateService.
    */
-  constructor(cdpServiceDal: CdpServicesDal,
+  constructor(dal: Dal,
               thingUpdateService: ThingUpdateService) {
-    this.cdpServiceDal = cdpServiceDal;
+    this.dal = dal;
     this.thingUpdateService = thingUpdateService;
     this.cache = new DtoCache(this.thingUpdateService);
     this.openIterations = {};
@@ -276,11 +277,11 @@ export class UserSessionService implements Session {
    * Open the underlying Dal
    */
   public open(): Observable<boolean> {
-    return this.cdpServiceDal.requestUsername()
+    return this.dal.requestUsername()
       .pipe(
         map(x => {
           this.activeUsername = x;
-          return this.cdpServiceDal.open();
+          return this.dal.open();
         }),
         concatAll(),
         map(dtos => {
@@ -297,7 +298,7 @@ export class UserSessionService implements Session {
    * @param files The files content that need to be uploaded. If is null, then no files are to be uploaded.
    */
   public write(operationContainer: OperationContainer, files?: File []): Observable<boolean> {
-    return this.cdpServiceDal.write(operationContainer, files)
+    return this.dal.write(operationContainer, files)
       .pipe(
         map(dtos => {
           this.cache.synchronize(dtos);
@@ -338,11 +339,11 @@ export class UserSessionService implements Session {
     const iteration = new Dto.Iteration(iterationSetup.iterationIid, 0, false);
     iteration.container = model;
 
-    return this.cdpServiceDal.read(mrdl)
+    return this.dal.read(mrdl)
       .pipe(
         map(dtos => {
           this.onReadReferenceDataLibrary(dtos, mrdl);
-          return this.cdpServiceDal.read(iteration);
+          return this.dal.read(iteration);
         }),
         concatAll(),
         map(dtos => {
@@ -357,7 +358,7 @@ export class UserSessionService implements Session {
    * @param rdl The ReferenceDataLibrary to read
    */
   public readRdl(rdl: Dto.ReferenceDataLibrary): Observable<boolean> {
-    return this.cdpServiceDal.read(rdl)
+    return this.dal.read(rdl)
       .pipe(
         map(dtos => {
           this.onReadReferenceDataLibrary(dtos, rdl);
@@ -371,7 +372,7 @@ export class UserSessionService implements Session {
    * @param thing The Thing to read
    */
   public readThing(thing: Dto.Thing): Observable<boolean> {
-    return this.cdpServiceDal.read(thing)
+    return this.dal.read(thing)
       .pipe(
         map(dtos => {
           this.cache.synchronize(dtos);
@@ -486,7 +487,7 @@ export class UserSessionService implements Session {
 
     const queryAttribute = new QueryAttributes();
     queryAttribute.revisionNumber = revisionNumber;
-    this.cdpServiceDal.read(thing, queryAttribute)
+    this.dal.read(thing, queryAttribute)
       .subscribe(
         dtos => this.cache.synchronize(dtos),
         err => console.log(err)

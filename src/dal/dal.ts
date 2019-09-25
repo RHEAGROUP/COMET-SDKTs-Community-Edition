@@ -26,7 +26,7 @@ export interface Dal {
    * @param thing An instance of Thing that needs to be read from the data-source.
    * @param attributes An instance of QueryAttributes to be passed along with the request.
    */
-  read(thing: Dto.Thing, attributes: QueryAttributes): Observable<Dto.Thing[]>;
+  read(thing: Dto.Thing, attributes?: QueryAttributes): Observable<Dto.Thing[]>;
 
   /**
    * Opens a connection to a data source Uri when provided with connection credentials.

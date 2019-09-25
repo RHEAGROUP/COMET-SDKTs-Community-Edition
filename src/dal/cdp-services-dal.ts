@@ -56,7 +56,7 @@ export class CdpServicesDal implements Dal {
    * @param thing An instance of Thing that needs to be read from the data-source.
    * @param attributes An instance of QueryAttributes to be passed along with the request.
    */
-  public read(thing: Dto.Thing, attributes: QueryAttributes = null): Observable<Dto.Thing[]> {
+  public read(thing: Dto.Thing, attributes?: QueryAttributes): Observable<Dto.Thing[]> {
 
     if (Utils.isUndefinedOrNull(thing)) {
       throw new Error('The provided Thing cannot be undefined or null.');
