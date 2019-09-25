@@ -1,6 +1,6 @@
 {
   "name": "cdp4-sdkts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The Concurrent Design Platform Typescript Software Development Kit that is compliant with ECSS-E-TM-10-25 Annex A and Annex C",
   "license": "LGPL-3.0",
   "repository": {

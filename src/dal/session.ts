@@ -1,13 +1,14 @@
 /**
  * @file    session.ts
  * @company     RHEA System S.A.
- * @copyright  Copyright (c) 2016  RHEA System S.A.
+ * @copyright  Copyright (c) 2019  RHEA System S.A.
  */
 
 import {Dto} from '../dto/autogen/dto.generated';
 import {PermissionService} from './permission.service';
 import {Observable} from 'rxjs/internal/Observable';
 import {OperationContainer} from './operation-container';
+import {DtoCache} from './autogen-cache/dto-cache.generated';
 
 /**
  * The Session interface describing communication with the data-source and orchestration updating the DTO cache.
@@ -32,6 +33,11 @@ export interface Session {
    * Gets the IPermissionService that handles access permissions for this Session.
    */
   permissionService: PermissionService;
+
+  /**
+   * The DTO cache.
+   */
+  readonly cache: DtoCache;
 
   /**
    * Query the thing of a specific kind from the cache.

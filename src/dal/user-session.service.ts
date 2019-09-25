@@ -1,7 +1,7 @@
 ﻿/**
  * @file    userSession.service.ts
  * @company     RHEA System S.A.
- * @copyright  Copyright (c) 2016  RHEA System S.A.
+ * @copyright  Copyright (c) 2019  RHEA System S.A.
  */
 
 import {Observable, of} from 'rxjs';
@@ -59,7 +59,7 @@ export class UserSessionService implements Session {
   /**
    * The DTO cache.
    */
-  private cache: DtoCache;
+  public readonly cache: DtoCache;
 
   /**
    * The active username.

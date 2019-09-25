@@ -1,7 +1,7 @@
 ﻿/**
  * @file		data-member.decorator.ts
  * @company		 RHEA System S.A.
- * @copyright	Copyright (c) 2016  RHEA System S.A.
+ * @copyright	Copyright (c) 2019  RHEA System S.A.
  */
 
 import "reflect-metadata";
