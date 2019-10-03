@@ -58,6 +58,9 @@ export class WebServiceClient {
       return ajax({
         url: route,
         method: 'POST',
+        headers: {
+          'Accept-CDP': this.cdpVersion
+        },
         responseType: 'json',
         body: multipartBody
       });
@@ -71,6 +74,9 @@ export class WebServiceClient {
     return ajax({
       url: route,
       method: 'POST',
+      headers: {
+        'Accept-CDP': this.cdpVersion
+      },
       responseType: respType,
       body: body
     });

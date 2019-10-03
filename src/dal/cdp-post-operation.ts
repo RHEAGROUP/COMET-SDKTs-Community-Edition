@@ -110,7 +110,7 @@ export class CdpPostOperation {
             const modifiedPropertyOrdered = modifiedThing[key] as Cdp4Type.OrderedItem[];
 
             // move property using intersection
-            const sameItems = originalPropertyOrdered.filter(n => (modifiedPropertyOrdered.indexOf(n) !== -1));
+            const sameItems = originalPropertyOrdered.filter(n => (modifiedPropertyOrdered.findIndex(x => x.v === n.v) !== -1));
 
             for (const sameItem in sameItems) {
               const orItem = originalPropertyOrdered.find(o => o.v === sameItems[sameItem].v);
@@ -136,14 +136,14 @@ export class CdpPostOperation {
             }
           }
 
-          const newItems = modifiedProperty.filter(x => originalProperty.indexOf(x) < 0);
+          const newItems = propertyMetadata.isOrdered ? modifiedProperty.filter(x => originalProperty.findIndex(y => y.v === x.v) < 0) : modifiedProperty.filter(x => originalProperty.indexOf(x) < 0);
           Array.prototype.push.apply(possibleAdditions, newItems);
 
           if (possibleAdditions.length > 0) {
             listsToAdd[key] = possibleAdditions;
           }
 
-          const possibleDeletions = originalProperty.filter(x => modifiedProperty.indexOf(x) < 0);
+          const possibleDeletions = propertyMetadata.isOrdered ? originalProperty.filter(x => modifiedProperty.findIndex(y => y.v === x.v) < 0) : originalProperty.filter(x => modifiedProperty.indexOf(x) < 0);
           if (possibleDeletions.length > 0) {
             // this part will be added to the delete
             listsToDelete[key] = possibleDeletions;
