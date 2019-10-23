@@ -3,30 +3,32 @@
 
 module.exports = function (config) {
   config.set({
-    basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    frameworks: ["jasmine", "karma-typescript"],
     plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      'karma-jasmine',
+      'karma-chrome-launcher',
+      'karma-typescript',
+      'karma-jasmine-html-reporter'
     ],
+    files: [
+      {pattern: "src/**/*.ts"},
+      { pattern: './src/json-serializer/test-data/jsonSerializerData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/siteDirectoryData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/rdlData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/iterationData.js', included: true, served: true, watched: false, nocache: false },
+      { pattern: './src/dal/test-data/emailResponseData.js', included: true, served: true, watched: false, nocache: false },
+    ],
+    preprocessors: {
+      "**/*.ts": ["karma-typescript"],
+    },
+    karmaTypescriptConfig: {
+      tsconfig: "./tsconfig.spec.json",
+    },
+    reporters: ['progress', 'kjhtml'],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/cdp4-sdkts-app'),
-      reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
-    },
-    reporters: ['progress', 'kjhtml'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
-    restartOnFileChange: true
+    browsers: ["Chrome"],
+    // logLevel: config.LOG_DEBUG,
   });
 };
