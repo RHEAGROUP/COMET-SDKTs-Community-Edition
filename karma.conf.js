@@ -7,11 +7,12 @@ module.exports = function (config) {
     plugins: [
       'karma-jasmine',
       'karma-chrome-launcher',
+      'karma-firefox-launcher',
       'karma-typescript',
       'karma-jasmine-html-reporter'
     ],
     files: [
-      {pattern: "src/**/*.ts"},
+      { pattern: "src/**/*.ts"},
       { pattern: './src/json-serializer/test-data/jsonSerializerData.js', included: true, served: true, watched: false, nocache: false },
       { pattern: './src/dal/test-data/siteDirectoryData.js', included: true, served: true, watched: false, nocache: false },
       { pattern: './src/dal/test-data/rdlData.js', included: true, served: true, watched: false, nocache: false },
@@ -29,6 +30,14 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     browsers: ["Chrome"],
+    browserDisconnectTimeout: 10000,
+    browserDisconnectTolerance: 3,
+    browserNoActivityTimeout: 60000,
+    flags: [
+      '--disable-web-security',
+      '--disable-gpu',
+      '--no-sandbox'
+    ]
     // logLevel: config.LOG_DEBUG,
   });
 };

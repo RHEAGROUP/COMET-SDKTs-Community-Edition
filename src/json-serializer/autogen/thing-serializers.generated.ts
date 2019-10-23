@@ -10396,18 +10396,28 @@ export module Cdp4JsonSerializer {
      * Parse a JSON value-array representation to a string array
      * @param jsonObject the JSON value-array representation
      */
-    function parseValueArray(jsonObject: string): string[] {
+    export function parseValueArray(jsonObject: string): string[] {
         var valueArray = new Array<string>();
 
         // extract the array in between []
-        var parsedJson = jsonObject.match(/^\[(.*?)\]$/)[1];
+        var stringArray = /^\[([\s\S]*)\]$/g;
+        var parsedJson = stringArray.exec(jsonObject)[1];
 
-        // split and trim
-        var splitString = parsedJson.split(",");
-        splitString.forEach(value => value.trim());
+        var elements = /\"([^\"\\]*(\\.[^\"\\]*)*)\"/g;
 
-        // extract the value in between ""
-        splitString.forEach(value => valueArray.push(value.match(/^\"(.*?)\"$/)[1]));
+        var match;
+        while((match = elements.exec(parsedJson)) !== null){
+          valueArray.push(
+            match[1]
+              .replace(/\\\"/g, "\"")
+              .replace(/\\\\/g, "\\")
+              .replace(/\\f/g, "\f")
+              .replace(/\\n/g, "\n")
+              .replace(/\\r/g, "\r")
+              .replace(/\\t/g, "\t")
+          )
+        }
+
         return valueArray;
     }
 
@@ -10433,13 +10443,21 @@ export module Cdp4JsonSerializer {
 
     /**
      * Convert a value array to JSON string
-     * @param valueArray The  vallue-array to convert
+     * @param valueArray The  value-array to convert
      * @returns The JSON string
      */
-    function toJsonValueArray(valueArray: string[]): string {
-        let tmpArray = new Array<string>();
-        valueArray.forEach(v => tmpArray.push("\"" + v + "\""));
-        return "[" + tmpArray.join(",") + "]";
+    export function toJsonValueArray(valueArray: string[]): string {
+      let tmpArray = new Array<string>();
+      valueArray.forEach(v => tmpArray.push("\""
+        + v.replace(/\\/g, "\\\\")
+          .replace(/"/g, "\\\"")
+          .replace(/\f/g, "\\f")
+          .replace(/\n/g, "\\n")
+          .replace(/\r/g, "\\r")
+          .replace(/\t/g, "\\t")
+        + "\""));
+
+      return "[" + tmpArray.join(",") + "]";
     }
 
     /**
