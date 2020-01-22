@@ -6,6 +6,9 @@
 
 import {Cdp4JsonSerializer} from './autogen/thing-serializers.generated';
 import {Dto} from '../dto/autogen/dto.generated';
+import FileRevision = Dto.FileRevision;
+import {Cdp4Type} from '../types/ordered-item';
+import OrderedItem = Cdp4Type.OrderedItem;
 
 declare let jsonSerializerData: any;
 
@@ -40,7 +43,6 @@ describe('serializer Tests', () => {
   it('Serializer should work',
     () => {
       const result = Cdp4JsonSerializer.deserialize(jsonSerializerData);
-
       const serializerResult = Cdp4JsonSerializer.serialize(result);
       const serializerResultObj = JSON.parse(serializerResult);
       expect(serializerResultObj).toEqual(jsonSerializerData);
@@ -53,6 +55,41 @@ describe('serializer Tests', () => {
       expect(function () {
         Cdp4JsonSerializer.serialize(array);
       }).toThrow(new Error('The type string not supported yet'));
+    }
+  );
+
+  it('Serializer performs stable serialization of properties',
+    () => {
+    const expectedResult = "[{\"classKind\":\"FileRevision\",\"contentHash\":\"F73747371CFD9473C19A0A7F99BCAB008474C4CA\",\"creator\":\"284334dd-e8e5-42d6-bc8a-715c507a7f02\",\"excludedDomain\":[],\"excludedPerson\":[\"b16894e4-acb5-4e81-a118-16c00eb86d8f\",\"b18894e4-acb5-4e81-a118-16c00eb86d8f\",\"b19894e4-acb5-4e81-a118-16c00eb86d8f\"],\"fileType\":[{\"k\":4,\"v\":\"b16894e4-acb5-4e81-a118-16c00eb86d8f\"},{\"k\":8,\"v\":\"b19894e4-acb5-4e81-a118-16c00eb86d8f\"},{\"k\":12,\"v\":\"b18894e4-acb5-4e81-a118-16c00eb86d8f\"}],\"iid\":\"e8de903b-9c38-416a-83f4-90b6cf7b7a41\",\"name\":\"testfile\",\"revisionNumber\":0}]";
+      const fileRevision = new FileRevision('e8de903b-9c38-416a-83f4-90b6cf7b7a41', 0, true);
+      fileRevision.name = 'testfile';
+      fileRevision.contentHash = 'F73747371CFD9473C19A0A7F99BCAB008474C4CA';
+      
+      const fileType1 = new OrderedItem();
+      fileType1.k = 8;
+      fileType1.v = 'b19894e4-acb5-4e81-a118-16c00eb86d8f';
+
+      const fileType2 = new OrderedItem();
+      fileType2.k = 12;
+      fileType2.v = 'b18894e4-acb5-4e81-a118-16c00eb86d8f';
+
+      const fileType3 = new OrderedItem();
+      fileType3.k = 4;
+      fileType3.v = 'b16894e4-acb5-4e81-a118-16c00eb86d8f';
+      
+      fileRevision.fileType.push(fileType1);
+      fileRevision.fileType.push(fileType2);
+      fileRevision.fileType.push(fileType3);
+      
+      fileRevision.creator = '284334dd-e8e5-42d6-bc8a-715c507a7f02';
+      
+      fileRevision.excludedPerson.push('b18894e4-acb5-4e81-a118-16c00eb86d8f');
+      fileRevision.excludedPerson.push('b19894e4-acb5-4e81-a118-16c00eb86d8f');
+      fileRevision.excludedPerson.push('b16894e4-acb5-4e81-a118-16c00eb86d8f');
+
+      console.log(Cdp4JsonSerializer.serialize(Array.of(fileRevision)));
+
+      expect(Cdp4JsonSerializer.serialize(Array.of(fileRevision))).toBe(expectedResult);
     }
   );
 
