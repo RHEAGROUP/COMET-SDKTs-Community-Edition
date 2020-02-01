@@ -254,29 +254,29 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actionee": new PropertyMetadata("actionee", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "actionee": new PropertyMetadata("actionee", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "closeOutDate": new PropertyMetadata("closeOutDate", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "closeOutStatement": new PropertyMetadata("closeOutStatement", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "dueDate": new PropertyMetadata("dueDate", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -446,14 +446,14 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "kind": new PropertyMetadata("kind", "ActualFiniteStateKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "possibleState": new PropertyMetadata("possibleState", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "possibleState": new PropertyMetadata("possibleState", "PossibleFiniteState", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
     };
@@ -588,16 +588,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actualState": new PropertyMetadata("actualState", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "actualState": new PropertyMetadata("actualState", "ActualFiniteState", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludeOption": new PropertyMetadata("excludeOption", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludeOption": new PropertyMetadata("excludeOption", "Option", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "possibleFiniteStateList": new PropertyMetadata("possibleFiniteStateList", "string", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "possibleFiniteStateList": new PropertyMetadata("possibleFiniteStateList", "PossibleFiniteStateList", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
     };
@@ -738,8 +738,8 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isSynonym": new PropertyMetadata("isSynonym", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -877,12 +877,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "term": new PropertyMetadata("term", "string", 2, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "term": new PropertyMetadata("term", "BooleanExpression", 2, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -1010,17 +1010,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationApprovalKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -1159,16 +1159,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "component": new PropertyMetadata("component", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "component": new PropertyMetadata("component", "ParameterTypeComponent", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "dimension": new PropertyMetadata("dimension", "number", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "hasSingleComponentType": new PropertyMetadata("hasSingleComponentType", "boolean", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isFinalized": new PropertyMetadata("isFinalized", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -1337,16 +1337,16 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "caption": new PropertyMetadata("caption", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fileType": new PropertyMetadata("fileType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fileType": new PropertyMetadata("fileType", "FileType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -1488,17 +1488,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterValue": new PropertyMetadata("parameterValue", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterValue": new PropertyMetadata("parameterValue", "RelationshipParameterValue", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "source": new PropertyMetadata("source", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "target": new PropertyMetadata("target", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "source": new PropertyMetadata("source", "Thing", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "target": new PropertyMetadata("target", "Thing", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -1635,23 +1635,23 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "forwardRelationshipName": new PropertyMetadata("forwardRelationshipName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "inverseRelationshipName": new PropertyMetadata("inverseRelationshipName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relationshipCategory": new PropertyMetadata("relationshipCategory", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "relationshipCategory": new PropertyMetadata("relationshipCategory", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceCategory": new PropertyMetadata("sourceCategory", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "targetCategory": new PropertyMetadata("targetCategory", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceCategory": new PropertyMetadata("sourceCategory", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "targetCategory": new PropertyMetadata("targetCategory", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -1802,17 +1802,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "section": new PropertyMetadata("section", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "section": new PropertyMetadata("section", "Section", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
@@ -1952,13 +1952,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -2113,8 +2113,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "height": new PropertyMetadata("height", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -2259,17 +2259,17 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "executedOn": new PropertyMetadata("executedOn", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isActive": new PropertyMetadata("isActive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "RuleVerificationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "violation": new PropertyMetadata("violation", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, false, "1.0.0"),
+      "violation": new PropertyMetadata("violation", "RuleViolation", 0, "*", AggregationKind.Composite, false, false, false, false, false, false, "1.0.0"),
     };
 
     /**
@@ -2407,12 +2407,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isAbstract": new PropertyMetadata("isAbstract", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -2421,7 +2421,7 @@ export module Metadata {
       "permissibleClass": new PropertyMetadata("permissibleClass", "ClassKind", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "superCategory": new PropertyMetadata("superCategory", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "superCategory": new PropertyMetadata("superCategory", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -2568,26 +2568,26 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "changeRequest": new PropertyMetadata("changeRequest", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "changeRequest": new PropertyMetadata("changeRequest", "ChangeRequest", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -2750,25 +2750,25 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -2930,8 +2930,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isAdaptation": new PropertyMetadata("isAdaptation", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "location": new PropertyMetadata("location", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -2939,7 +2939,7 @@ export module Metadata {
       "remark": new PropertyMetadata("remark", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "source": new PropertyMetadata("source", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "source": new PropertyMetadata("source", "ReferenceSource", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -3077,8 +3077,8 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "blue": new PropertyMetadata("blue", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "green": new PropertyMetadata("green", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -3220,14 +3220,14 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "file": new PropertyMetadata("file", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "folder": new PropertyMetadata("folder", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "file": new PropertyMetadata("file", "File", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "folder": new PropertyMetadata("folder", "Folder", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -3366,14 +3366,14 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "component": new PropertyMetadata("component", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "component": new PropertyMetadata("component", "ParameterTypeComponent", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isFinalized": new PropertyMetadata("isFinalized", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -3533,20 +3533,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "value": new PropertyMetadata("value", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
     };
@@ -3697,26 +3697,26 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "changeProposal": new PropertyMetadata("changeProposal", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "changeProposal": new PropertyMetadata("changeProposal", "ChangeProposal", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -3879,17 +3879,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMaximumInclusive": new PropertyMetadata("isMaximumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMinimumInclusive": new PropertyMetadata("isMinimumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "MappingToReferenceScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "maximumPermissibleValue": new PropertyMetadata("maximumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minimumPermissibleValue": new PropertyMetadata("minimumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -3900,8 +3900,8 @@ export module Metadata {
       "positiveValueConnotation": new PropertyMetadata("positiveValueConnotation", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueDefinition": new PropertyMetadata("valueDefinition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "valueDefinition": new PropertyMetadata("valueDefinition", "ScaleValueDefinition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -4066,13 +4066,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -4226,13 +4226,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -4386,14 +4386,14 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "containedCategory": new PropertyMetadata("containedCategory", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "containingCategory": new PropertyMetadata("containingCategory", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "containedCategory": new PropertyMetadata("containedCategory", "Category", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "containingCategory": new PropertyMetadata("containingCategory", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "maxContained": new PropertyMetadata("maxContained", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
@@ -4550,12 +4550,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "citation": new PropertyMetadata("citation", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "citation": new PropertyMetadata("citation", "Citation", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "example": new PropertyMetadata("example", "string", 0, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -4697,25 +4697,25 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "allPossibleScale": new PropertyMetadata("allPossibleScale", "string", 0, "*", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "allPossibleScale": new PropertyMetadata("allPossibleScale", "MeasurementScale", 0, "*", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "defaultScale": new PropertyMetadata("defaultScale", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "defaultScale": new PropertyMetadata("defaultScale", "MeasurementScale", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "numberOfValues": new PropertyMetadata("numberOfValues", "number", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "possibleScale": new PropertyMetadata("possibleScale", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "possibleScale": new PropertyMetadata("possibleScale", "MeasurementScale", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "quantityDimensionExponent": new PropertyMetadata("quantityDimensionExponent", "string", 0, "*", AggregationKind.None, false, true, false, true, false, false, "1.0.0"),
       "quantityDimensionExpression": new PropertyMetadata("quantityDimensionExpression", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "quantityDimensionSymbol": new PropertyMetadata("quantityDimensionSymbol", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "quantityKindFactor": new PropertyMetadata("quantityKindFactor", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "quantityKindFactor": new PropertyMetadata("quantityKindFactor", "QuantityKindFactor", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "symbol": new PropertyMetadata("symbol", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -4876,19 +4876,19 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unitFactor": new PropertyMetadata("unitFactor", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "unitFactor": new PropertyMetadata("unitFactor", "UnitFactor", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -5032,12 +5032,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "bounds": new PropertyMetadata("bounds", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "bounds": new PropertyMetadata("bounds", "Bounds", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "diagramElement": new PropertyMetadata("diagramElement", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "diagramElement": new PropertyMetadata("diagramElement", "DiagramElementThing", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -5177,21 +5177,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "bounds": new PropertyMetadata("bounds", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "bounds": new PropertyMetadata("bounds", "Bounds", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "depictedThing": new PropertyMetadata("depictedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "diagramElement": new PropertyMetadata("diagramElement", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "depictedThing": new PropertyMetadata("depictedThing", "Thing", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "diagramElement": new PropertyMetadata("diagramElement", "DiagramElementThing", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "localStyle": new PropertyMetadata("localStyle", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "localStyle": new PropertyMetadata("localStyle", "OwnedStyle", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "point": new PropertyMetadata("point", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "point": new PropertyMetadata("point", "Point", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "sharedStyle": new PropertyMetadata("sharedStyle", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "source": new PropertyMetadata("source", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "target": new PropertyMetadata("target", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sharedStyle": new PropertyMetadata("sharedStyle", "SharedStyle", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "source": new PropertyMetadata("source", "DiagramElementThing", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "target": new PropertyMetadata("target", "DiagramElementThing", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -5339,20 +5339,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "bounds": new PropertyMetadata("bounds", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "bounds": new PropertyMetadata("bounds", "Bounds", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "depictedThing": new PropertyMetadata("depictedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "diagramElement": new PropertyMetadata("diagramElement", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "depictedThing": new PropertyMetadata("depictedThing", "Thing", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "diagramElement": new PropertyMetadata("diagramElement", "DiagramElementThing", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "documentation": new PropertyMetadata("documentation", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "localStyle": new PropertyMetadata("localStyle", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "localStyle": new PropertyMetadata("localStyle", "OwnedStyle", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "resolution": new PropertyMetadata("resolution", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "sharedStyle": new PropertyMetadata("sharedStyle", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sharedStyle": new PropertyMetadata("sharedStyle", "SharedStyle", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
     };
 
     /**
@@ -5499,15 +5499,15 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "file": new PropertyMetadata("file", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "folder": new PropertyMetadata("folder", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "file": new PropertyMetadata("file", "File", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "folder": new PropertyMetadata("folder", "Folder", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isHidden": new PropertyMetadata("isHidden", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -5648,13 +5648,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -5803,13 +5803,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "domain": new PropertyMetadata("domain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "domain": new PropertyMetadata("domain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -5958,21 +5958,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "containedElement": new PropertyMetadata("containedElement", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "containedElement": new PropertyMetadata("containedElement", "ElementUsage", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameter": new PropertyMetadata("parameter", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "parameterGroup": new PropertyMetadata("parameterGroup", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "referencedElement": new PropertyMetadata("referencedElement", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameter": new PropertyMetadata("parameter", "Parameter", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "parameterGroup": new PropertyMetadata("parameterGroup", "ParameterGroup", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "referencedElement": new PropertyMetadata("referencedElement", "NestedElement", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -6128,21 +6128,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "elementDefinition": new PropertyMetadata("elementDefinition", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludeOption": new PropertyMetadata("excludeOption", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "elementDefinition": new PropertyMetadata("elementDefinition", "ElementDefinition", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludeOption": new PropertyMetadata("excludeOption", "Option", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "interfaceEnd": new PropertyMetadata("interfaceEnd", "InterfaceEndKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterOverride": new PropertyMetadata("parameterOverride", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterOverride": new PropertyMetadata("parameterOverride", "ParameterOverride", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -6297,8 +6297,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
@@ -6433,18 +6433,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "book": new PropertyMetadata("book", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.1.0"),
+      "book": new PropertyMetadata("book", "Book", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.1.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "commonFileStore": new PropertyMetadata("commonFileStore", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "engineeringModelSetup": new PropertyMetadata("engineeringModelSetup", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "genericNote": new PropertyMetadata("genericNote", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "commonFileStore": new PropertyMetadata("commonFileStore", "CommonFileStore", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "engineeringModelSetup": new PropertyMetadata("engineeringModelSetup", "EngineeringModelSetup", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "genericNote": new PropertyMetadata("genericNote", "EngineeringModelDataNote", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "iteration": new PropertyMetadata("iteration", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "iteration": new PropertyMetadata("iteration", "Iteration", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "lastModifiedOn": new PropertyMetadata("lastModifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "logEntry": new PropertyMetadata("logEntry", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "modellingAnnotation": new PropertyMetadata("modellingAnnotation", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "logEntry": new PropertyMetadata("logEntry", "ModelLogEntry", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "modellingAnnotation": new PropertyMetadata("modellingAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
@@ -6594,16 +6594,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "replyTo": new PropertyMetadata("replyTo", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "replyTo": new PropertyMetadata("replyTo", "DiscussionItem", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -6740,18 +6740,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -6894,21 +6894,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "activeDomain": new PropertyMetadata("activeDomain", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "activeDomain": new PropertyMetadata("activeDomain", "DomainOfExpertise", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "engineeringModelIid": new PropertyMetadata("engineeringModelIid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "iterationSetup": new PropertyMetadata("iterationSetup", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "iterationSetup": new PropertyMetadata("iterationSetup", "IterationSetup", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "kind": new PropertyMetadata("kind", "EngineeringModelKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "participant": new PropertyMetadata("participant", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "requiredRdl": new PropertyMetadata("requiredRdl", "string", 1, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "participant": new PropertyMetadata("participant", "Participant", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "requiredRdl": new PropertyMetadata("requiredRdl", "ModelReferenceDataLibrary", 1, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "sourceEngineeringModelSetupIid": new PropertyMetadata("sourceEngineeringModelSetupIid", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -7070,14 +7070,14 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "allowMultiSelect": new PropertyMetadata("allowMultiSelect", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -7086,7 +7086,7 @@ export module Metadata {
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "symbol": new PropertyMetadata("symbol", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueDefinition": new PropertyMetadata("valueDefinition", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "valueDefinition": new PropertyMetadata("valueDefinition", "EnumerationValueDefinition", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -7237,12 +7237,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -7387,12 +7387,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "term": new PropertyMetadata("term", "string", 2, "2", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "term": new PropertyMetadata("term", "BooleanExpression", 2, "2", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -7521,17 +7521,17 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "correspondence": new PropertyMetadata("correspondence", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "externalFormat": new PropertyMetadata("externalFormat", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "correspondence": new PropertyMetadata("correspondence", "IdCorrespondence", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "externalFormat": new PropertyMetadata("externalFormat", "ReferenceSource", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "externalModelName": new PropertyMetadata("externalModelName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "externalToolName": new PropertyMetadata("externalToolName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "externalToolVersion": new PropertyMetadata("externalToolVersion", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -7673,15 +7673,15 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fileRevision": new PropertyMetadata("fileRevision", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fileRevision": new PropertyMetadata("fileRevision", "FileRevision", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "lockedBy": new PropertyMetadata("lockedBy", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "lockedBy": new PropertyMetadata("lockedBy", "Person", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -7818,13 +7818,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "containingFolder": new PropertyMetadata("containingFolder", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "containingFolder": new PropertyMetadata("containingFolder", "Folder", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "contentHash": new PropertyMetadata("contentHash", "string", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "creator": new PropertyMetadata("creator", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fileType": new PropertyMetadata("fileType", "string", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
+      "creator": new PropertyMetadata("creator", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fileType": new PropertyMetadata("fileType", "FileType", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -7968,14 +7968,14 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "extension": new PropertyMetadata("extension", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -8127,15 +8127,15 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "containingFolder": new PropertyMetadata("containingFolder", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "containingFolder": new PropertyMetadata("containingFolder", "Folder", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "creator": new PropertyMetadata("creator", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "creator": new PropertyMetadata("creator", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "path": new PropertyMetadata("path", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
@@ -8274,20 +8274,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "term": new PropertyMetadata("term", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "term": new PropertyMetadata("term", "Term", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -8433,13 +8433,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -8587,8 +8587,8 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -8726,13 +8726,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "externalId": new PropertyMetadata("externalId", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "internalThing": new PropertyMetadata("internalThing", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -8864,17 +8864,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMaximumInclusive": new PropertyMetadata("isMaximumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMinimumInclusive": new PropertyMetadata("isMinimumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "MappingToReferenceScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "maximumPermissibleValue": new PropertyMetadata("maximumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minimumPermissibleValue": new PropertyMetadata("minimumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -8884,8 +8884,8 @@ export module Metadata {
       "positiveValueConnotation": new PropertyMetadata("positiveValueConnotation", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueDefinition": new PropertyMetadata("valueDefinition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "valueDefinition": new PropertyMetadata("valueDefinition", "ScaleValueDefinition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -9048,33 +9048,33 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actualFiniteStateList": new PropertyMetadata("actualFiniteStateList", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "actualFiniteStateList": new PropertyMetadata("actualFiniteStateList", "ActualFiniteStateList", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "defaultOption": new PropertyMetadata("defaultOption", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "diagramCanvas": new PropertyMetadata("diagramCanvas", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
-      "domainFileStore": new PropertyMetadata("domainFileStore", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "element": new PropertyMetadata("element", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "externalIdentifierMap": new PropertyMetadata("externalIdentifierMap", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "goal": new PropertyMetadata("goal", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "defaultOption": new PropertyMetadata("defaultOption", "Option", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "diagramCanvas": new PropertyMetadata("diagramCanvas", "DiagramCanvas", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "domainFileStore": new PropertyMetadata("domainFileStore", "DomainFileStore", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "element": new PropertyMetadata("element", "ElementDefinition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "externalIdentifierMap": new PropertyMetadata("externalIdentifierMap", "ExternalIdentifierMap", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "goal": new PropertyMetadata("goal", "Goal", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "iterationSetup": new PropertyMetadata("iterationSetup", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "iterationSetup": new PropertyMetadata("iterationSetup", "IterationSetup", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "option": new PropertyMetadata("option", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
-      "possibleFiniteStateList": new PropertyMetadata("possibleFiniteStateList", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "publication": new PropertyMetadata("publication", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "relationship": new PropertyMetadata("relationship", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "requirementsSpecification": new PropertyMetadata("requirementsSpecification", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "option": new PropertyMetadata("option", "Option", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "possibleFiniteStateList": new PropertyMetadata("possibleFiniteStateList", "PossibleFiniteStateList", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "publication": new PropertyMetadata("publication", "Publication", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "relationship": new PropertyMetadata("relationship", "Relationship", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "requirementsSpecification": new PropertyMetadata("requirementsSpecification", "RequirementsSpecification", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "ruleVerificationList": new PropertyMetadata("ruleVerificationList", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "sharedDiagramStyle": new PropertyMetadata("sharedDiagramStyle", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "ruleVerificationList": new PropertyMetadata("ruleVerificationList", "RuleVerificationList", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "sharedDiagramStyle": new PropertyMetadata("sharedDiagramStyle", "SharedStyle", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "sourceIterationIid": new PropertyMetadata("sourceIterationIid", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "stakeholder": new PropertyMetadata("stakeholder", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
-      "stakeholderValue": new PropertyMetadata("stakeholderValue", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
-      "stakeholderValueMap": new PropertyMetadata("stakeholderValueMap", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
-      "topElement": new PropertyMetadata("topElement", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueGroup": new PropertyMetadata("valueGroup", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "stakeholder": new PropertyMetadata("stakeholder", "Stakeholder", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "stakeholderValue": new PropertyMetadata("stakeholderValue", "StakeholderValue", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "stakeholderValueMap": new PropertyMetadata("stakeholderValueMap", "StakeHolderValueMap", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "topElement": new PropertyMetadata("topElement", "ElementDefinition", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "valueGroup": new PropertyMetadata("valueGroup", "ValueGroup", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
     };
 
     /**
@@ -9262,8 +9262,8 @@ export module Metadata {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "description": new PropertyMetadata("description", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "frozenOn": new PropertyMetadata("frozenOn", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeleted": new PropertyMetadata("isDeleted", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -9271,7 +9271,7 @@ export module Metadata {
       "iterationNumber": new PropertyMetadata("iterationNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "sourceIterationSetup": new PropertyMetadata("sourceIterationSetup", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceIterationSetup": new PropertyMetadata("sourceIterationSetup", "IterationSetup", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
     };
 
     /**
@@ -9411,18 +9411,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "conversionFactor": new PropertyMetadata("conversionFactor", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referenceUnit": new PropertyMetadata("referenceUnit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referenceUnit": new PropertyMetadata("referenceUnit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -9569,20 +9569,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "exponent": new PropertyMetadata("exponent", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "factor": new PropertyMetadata("factor", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMaximumInclusive": new PropertyMetadata("isMaximumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMinimumInclusive": new PropertyMetadata("isMinimumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "logarithmBase": new PropertyMetadata("logarithmBase", "LogarithmBaseKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "MappingToReferenceScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "maximumPermissibleValue": new PropertyMetadata("maximumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minimumPermissibleValue": new PropertyMetadata("minimumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -9590,12 +9590,12 @@ export module Metadata {
       "negativeValueConnotation": new PropertyMetadata("negativeValueConnotation", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "numberSet": new PropertyMetadata("numberSet", "NumberSetKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "positiveValueConnotation": new PropertyMetadata("positiveValueConnotation", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referenceQuantityKind": new PropertyMetadata("referenceQuantityKind", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referenceQuantityValue": new PropertyMetadata("referenceQuantityValue", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "referenceQuantityKind": new PropertyMetadata("referenceQuantityKind", "QuantityKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referenceQuantityValue": new PropertyMetadata("referenceQuantityValue", "ScaleReferenceQuantityValue", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueDefinition": new PropertyMetadata("valueDefinition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "valueDefinition": new PropertyMetadata("valueDefinition", "ScaleValueDefinition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -9770,12 +9770,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "dependentScaleValue": new PropertyMetadata("dependentScaleValue", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "dependentScaleValue": new PropertyMetadata("dependentScaleValue", "ScaleValueDefinition", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "referenceScaleValue": new PropertyMetadata("referenceScaleValue", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referenceScaleValue": new PropertyMetadata("referenceScaleValue", "ScaleValueDefinition", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -9907,12 +9907,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "referencedRevisionNumber": new PropertyMetadata("referencedRevisionNumber", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referencedThing": new PropertyMetadata("referencedThing", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referencedThing": new PropertyMetadata("referencedThing", "Thing", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -10044,13 +10044,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "affectedItemIid": new PropertyMetadata("affectedItemIid", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Person", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "level": new PropertyMetadata("level", "LogLevelKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -10195,30 +10195,30 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "baseQuantityKind": new PropertyMetadata("baseQuantityKind", "string", 0, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
-      "baseUnit": new PropertyMetadata("baseUnit", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "baseQuantityKind": new PropertyMetadata("baseQuantityKind", "QuantityKind", 0, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
+      "baseUnit": new PropertyMetadata("baseUnit", "MeasurementUnit", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "constant": new PropertyMetadata("constant", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "definedCategory": new PropertyMetadata("definedCategory", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fileType": new PropertyMetadata("fileType", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "glossary": new PropertyMetadata("glossary", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "constant": new PropertyMetadata("constant", "Constant", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definedCategory": new PropertyMetadata("definedCategory", "Category", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fileType": new PropertyMetadata("fileType", "FileType", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "glossary": new PropertyMetadata("glossary", "Glossary", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "referenceSource": new PropertyMetadata("referenceSource", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "requiredRdl": new PropertyMetadata("requiredRdl", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "referenceSource": new PropertyMetadata("referenceSource", "ReferenceSource", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "requiredRdl": new PropertyMetadata("requiredRdl", "SiteReferenceDataLibrary", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "rule": new PropertyMetadata("rule", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "rule": new PropertyMetadata("rule", "Rule", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "unitPrefix": new PropertyMetadata("unitPrefix", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unitPrefix": new PropertyMetadata("unitPrefix", "UnitPrefix", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -10393,15 +10393,15 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterValue": new PropertyMetadata("parameterValue", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterValue": new PropertyMetadata("parameterValue", "RelationshipParameterValue", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "Thing", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -10537,20 +10537,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "maxRelated": new PropertyMetadata("maxRelated", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minRelated": new PropertyMetadata("minRelated", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedCategory": new PropertyMetadata("relatedCategory", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relationshipCategory": new PropertyMetadata("relationshipCategory", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "relatedCategory": new PropertyMetadata("relatedCategory", "Category", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "relationshipCategory": new PropertyMetadata("relationshipCategory", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -10702,8 +10702,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -10842,17 +10842,17 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "elementUsage": new PropertyMetadata("elementUsage", "string", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "elementUsage": new PropertyMetadata("elementUsage", "ElementUsage", 1, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isVolatile": new PropertyMetadata("isVolatile", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "nestedParameter": new PropertyMetadata("nestedParameter", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "nestedParameter": new PropertyMetadata("nestedParameter", "NestedParameter", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "rootElement": new PropertyMetadata("rootElement", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "rootElement": new PropertyMetadata("rootElement", "ElementDefinition", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
     };
 
@@ -10991,17 +10991,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actualState": new PropertyMetadata("actualState", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "actualState": new PropertyMetadata("actualState", "ActualFiniteState", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "actualValue": new PropertyMetadata("actualValue", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "associatedParameter": new PropertyMetadata("associatedParameter", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "associatedParameter": new PropertyMetadata("associatedParameter", "ParameterBase", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "formula": new PropertyMetadata("formula", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isVolatile": new PropertyMetadata("isVolatile", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "path": new PropertyMetadata("path", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
@@ -11143,12 +11143,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "term": new PropertyMetadata("term", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "term": new PropertyMetadata("term", "BooleanExpression", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -11276,17 +11276,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "nestedElement": new PropertyMetadata("nestedElement", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "nestedElement": new PropertyMetadata("nestedElement", "NestedElement", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -11432,17 +11432,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMaximumInclusive": new PropertyMetadata("isMaximumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMinimumInclusive": new PropertyMetadata("isMinimumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "MappingToReferenceScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "maximumPermissibleValue": new PropertyMetadata("maximumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minimumPermissibleValue": new PropertyMetadata("minimumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -11452,9 +11452,9 @@ export module Metadata {
       "positiveValueConnotation": new PropertyMetadata("positiveValueConnotation", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "useShortNameValues": new PropertyMetadata("useShortNameValues", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueDefinition": new PropertyMetadata("valueDefinition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "valueDefinition": new PropertyMetadata("valueDefinition", "ScaleValueDefinition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -11620,12 +11620,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "term": new PropertyMetadata("term", "string", 2, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "term": new PropertyMetadata("term", "BooleanExpression", 2, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -11754,8 +11754,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -11894,12 +11894,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fillColor": new PropertyMetadata("fillColor", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fillColor": new PropertyMetadata("fillColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fillOpacity": new PropertyMetadata("fillOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontBold": new PropertyMetadata("fontBold", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "fontColor": new PropertyMetadata("fontColor", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "fontColor": new PropertyMetadata("fontColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontItalic": new PropertyMetadata("fontItalic", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontName": new PropertyMetadata("fontName", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "fontSize": new PropertyMetadata("fontSize", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
@@ -11909,10 +11909,10 @@ export module Metadata {
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "strokeColor": new PropertyMetadata("strokeColor", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "strokeColor": new PropertyMetadata("strokeColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "strokeOpacity": new PropertyMetadata("strokeOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "strokeWidth": new PropertyMetadata("strokeWidth", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "usedColor": new PropertyMetadata("usedColor", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "usedColor": new PropertyMetadata("usedColor", "Color", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -12067,16 +12067,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "note": new PropertyMetadata("note", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "note": new PropertyMetadata("note", "Note", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -12219,21 +12219,21 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "allowDifferentOwnerOfOverride": new PropertyMetadata("allowDifferentOwnerOfOverride", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "expectsOverride": new PropertyMetadata("expectsOverride", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "group": new PropertyMetadata("group", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "group": new PropertyMetadata("group", "ParameterGroup", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isOptionDependent": new PropertyMetadata("isOptionDependent", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterSubscription": new PropertyMetadata("parameterSubscription", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "requestedBy": new PropertyMetadata("requestedBy", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterSubscription": new PropertyMetadata("parameterSubscription", "ParameterSubscription", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "requestedBy": new PropertyMetadata("requestedBy", "DomainOfExpertise", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "stateDependence": new PropertyMetadata("stateDependence", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueSet": new PropertyMetadata("valueSet", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "stateDependence": new PropertyMetadata("stateDependence", "ActualFiniteStateList", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "valueSet": new PropertyMetadata("valueSet", "ParameterValueSet", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -12384,9 +12384,9 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "containingGroup": new PropertyMetadata("containingGroup", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "containingGroup": new PropertyMetadata("containingGroup", "ParameterGroup", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -12520,18 +12520,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -12679,20 +12679,20 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "group": new PropertyMetadata("group", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "group": new PropertyMetadata("group", "ParameterGroup", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isOptionDependent": new PropertyMetadata("isOptionDependent", "boolean", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameter": new PropertyMetadata("parameter", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterSubscription": new PropertyMetadata("parameterSubscription", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameter": new PropertyMetadata("parameter", "Parameter", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterSubscription": new PropertyMetadata("parameterSubscription", "ParameterSubscription", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "stateDependence": new PropertyMetadata("stateDependence", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "valueSet": new PropertyMetadata("valueSet", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
+      "stateDependence": new PropertyMetadata("stateDependence", "ActualFiniteStateList", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
+      "valueSet": new PropertyMetadata("valueSet", "ParameterOverrideValueSet", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -12833,19 +12833,19 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actualOption": new PropertyMetadata("actualOption", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "actualState": new PropertyMetadata("actualState", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "actualOption": new PropertyMetadata("actualOption", "Option", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
+      "actualState": new PropertyMetadata("actualState", "ActualFiniteState", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
       "actualValue": new PropertyMetadata("actualValue", "string", 1, "*", AggregationKind.None, false, true, true, true, false, false, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "computed": new PropertyMetadata("computed", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "formula": new PropertyMetadata("formula", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "manual": new PropertyMetadata("manual", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "parameterValueSet": new PropertyMetadata("parameterValueSet", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "parameterValueSet": new PropertyMetadata("parameterValueSet", "ParameterValueSet", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "published": new PropertyMetadata("published", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "reference": new PropertyMetadata("reference", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
@@ -12994,18 +12994,18 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "group": new PropertyMetadata("group", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "group": new PropertyMetadata("group", "ParameterGroup", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isOptionDependent": new PropertyMetadata("isOptionDependent", "boolean", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "stateDependence": new PropertyMetadata("stateDependence", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "valueSet": new PropertyMetadata("valueSet", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
+      "stateDependence": new PropertyMetadata("stateDependence", "ActualFiniteStateList", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
+      "valueSet": new PropertyMetadata("valueSet", "ParameterSubscriptionValueSet", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -13141,20 +13141,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actualOption": new PropertyMetadata("actualOption", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "actualState": new PropertyMetadata("actualState", "string", 0, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "actualOption": new PropertyMetadata("actualOption", "Option", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
+      "actualState": new PropertyMetadata("actualState", "ActualFiniteState", 0, "1", AggregationKind.None, false, false, false, true, true, false, "1.0.0"),
       "actualValue": new PropertyMetadata("actualValue", "string", 1, "*", AggregationKind.None, false, true, true, true, false, false, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "computed": new PropertyMetadata("computed", "string", 1, "*", AggregationKind.None, false, true, true, true, false, false, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "manual": new PropertyMetadata("manual", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "reference": new PropertyMetadata("reference", "string", 1, "*", AggregationKind.None, false, true, true, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "subscribedValueSet": new PropertyMetadata("subscribedValueSet", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "subscribedValueSet": new PropertyMetadata("subscribedValueSet", "ParameterValueSetBase", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "valueSwitch": new PropertyMetadata("valueSwitch", "ParameterSwitchKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
@@ -13294,13 +13294,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
@@ -13433,18 +13433,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "actualOption": new PropertyMetadata("actualOption", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "actualState": new PropertyMetadata("actualState", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "actualOption": new PropertyMetadata("actualOption", "Option", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "actualState": new PropertyMetadata("actualState", "ActualFiniteState", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "actualValue": new PropertyMetadata("actualValue", "string", 1, "*", AggregationKind.None, false, true, true, true, false, false, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "computed": new PropertyMetadata("computed", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "formula": new PropertyMetadata("formula", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "manual": new PropertyMetadata("manual", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "published": new PropertyMetadata("published", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "reference": new PropertyMetadata("reference", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
@@ -13593,14 +13593,14 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "expression": new PropertyMetadata("expression", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "expression": new PropertyMetadata("expression", "BooleanExpression", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "topExpression": new PropertyMetadata("topExpression", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "topExpression": new PropertyMetadata("topExpression", "BooleanExpression", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
     };
 
     /**
@@ -13733,16 +13733,16 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "domain": new PropertyMetadata("domain", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "domain": new PropertyMetadata("domain", "DomainOfExpertise", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isActive": new PropertyMetadata("isActive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "person": new PropertyMetadata("person", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "person": new PropertyMetadata("person", "Person", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "role": new PropertyMetadata("role", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "selectedDomain": new PropertyMetadata("selectedDomain", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "role": new PropertyMetadata("role", "ParticipantRole", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "selectedDomain": new PropertyMetadata("selectedDomain", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -13880,8 +13880,8 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "accessRight": new PropertyMetadata("accessRight", "ParticipantAccessRightKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -14018,17 +14018,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "participantPermission": new PropertyMetadata("participantPermission", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "participantPermission": new PropertyMetadata("participantPermission", "ParticipantPermission", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -14175,27 +14175,27 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "defaultDomain": new PropertyMetadata("defaultDomain", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "defaultEmailAddress": new PropertyMetadata("defaultEmailAddress", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "defaultTelephoneNumber": new PropertyMetadata("defaultTelephoneNumber", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "emailAddress": new PropertyMetadata("emailAddress", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "defaultDomain": new PropertyMetadata("defaultDomain", "DomainOfExpertise", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "defaultEmailAddress": new PropertyMetadata("defaultEmailAddress", "EmailAddress", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "defaultTelephoneNumber": new PropertyMetadata("defaultTelephoneNumber", "TelephoneNumber", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "emailAddress": new PropertyMetadata("emailAddress", "EmailAddress", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "givenName": new PropertyMetadata("givenName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isActive": new PropertyMetadata("isActive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "organization": new PropertyMetadata("organization", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "organization": new PropertyMetadata("organization", "Organization", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "organizationalUnit": new PropertyMetadata("organizationalUnit", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "password": new PropertyMetadata("password", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "role": new PropertyMetadata("role", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "role": new PropertyMetadata("role", "PersonRole", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "surname": new PropertyMetadata("surname", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "telephoneNumber": new PropertyMetadata("telephoneNumber", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "userPreference": new PropertyMetadata("userPreference", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "telephoneNumber": new PropertyMetadata("telephoneNumber", "TelephoneNumber", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "userPreference": new PropertyMetadata("userPreference", "UserPreference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -14357,8 +14357,8 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "accessRight": new PropertyMetadata("accessRight", "PersonAccessRightKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -14495,17 +14495,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "personPermission": new PropertyMetadata("personPermission", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "personPermission": new PropertyMetadata("personPermission", "PersonPermission", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -14652,8 +14652,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -14791,16 +14791,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -14942,19 +14942,19 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "defaultState": new PropertyMetadata("defaultState", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "defaultState": new PropertyMetadata("defaultState", "PossibleFiniteState", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "possibleState": new PropertyMetadata("possibleState", "string", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "possibleState": new PropertyMetadata("possibleState", "PossibleFiniteState", 1, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -15104,19 +15104,19 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "conversionFactor": new PropertyMetadata("conversionFactor", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "prefix": new PropertyMetadata("prefix", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referenceUnit": new PropertyMetadata("referenceUnit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "prefix": new PropertyMetadata("prefix", "UnitPrefix", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referenceUnit": new PropertyMetadata("referenceUnit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
     };
@@ -15264,12 +15264,12 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "domain": new PropertyMetadata("domain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "domain": new PropertyMetadata("domain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "publishedParameter": new PropertyMetadata("publishedParameter", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "publishedParameter": new PropertyMetadata("publishedParameter", "ParameterOrOverrideBase", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -15403,12 +15403,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "exponent": new PropertyMetadata("exponent", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "quantityKind": new PropertyMetadata("quantityKind", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "quantityKind": new PropertyMetadata("quantityKind", "QuantityKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -15539,17 +15539,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMaximumInclusive": new PropertyMetadata("isMaximumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isMinimumInclusive": new PropertyMetadata("isMinimumInclusive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "mappingToReferenceScale": new PropertyMetadata("mappingToReferenceScale", "MappingToReferenceScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "maximumPermissibleValue": new PropertyMetadata("maximumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minimumPermissibleValue": new PropertyMetadata("minimumPermissibleValue", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -15559,8 +15559,8 @@ export module Metadata {
       "positiveValueConnotation": new PropertyMetadata("positiveValueConnotation", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueDefinition": new PropertyMetadata("valueDefinition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "valueDefinition": new PropertyMetadata("valueDefinition", "ScaleValueDefinition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -15723,20 +15723,20 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "maxReferenced": new PropertyMetadata("maxReferenced", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "minReferenced": new PropertyMetadata("minReferenced", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referencedCategory": new PropertyMetadata("referencedCategory", "string", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referencingCategory": new PropertyMetadata("referencingCategory", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referencedCategory": new PropertyMetadata("referencedCategory", "Category", 1, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referencingCategory": new PropertyMetadata("referencingCategory", "Category", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -15887,22 +15887,22 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "author": new PropertyMetadata("author", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "language": new PropertyMetadata("language", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "publicationYear": new PropertyMetadata("publicationYear", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "publishedIn": new PropertyMetadata("publishedIn", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "publisher": new PropertyMetadata("publisher", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "publishedIn": new PropertyMetadata("publishedIn", "ReferenceSource", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "publisher": new PropertyMetadata("publisher", "Organization", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "versionDate": new PropertyMetadata("versionDate", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -16064,14 +16064,14 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "relationalOperator": new PropertyMetadata("relationalOperator", "RelationalOperatorKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "value": new PropertyMetadata("value", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
     };
 
@@ -16207,13 +16207,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "value": new PropertyMetadata("value", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
     };
 
@@ -16346,25 +16346,25 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -16525,25 +16525,25 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -16704,21 +16704,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "group": new PropertyMetadata("group", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "group": new PropertyMetadata("group", "RequirementsGroup", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterValue": new PropertyMetadata("parameterValue", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "parametricConstraint": new PropertyMetadata("parametricConstraint", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterValue": new PropertyMetadata("parameterValue", "SimpleParameterValue", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "parametricConstraint": new PropertyMetadata("parametricConstraint", "ParametricConstraint", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -16874,13 +16874,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "value": new PropertyMetadata("value", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
     };
 
@@ -17013,19 +17013,19 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "group": new PropertyMetadata("group", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "group": new PropertyMetadata("group", "RequirementsGroup", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterValue": new PropertyMetadata("parameterValue", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterValue": new PropertyMetadata("parameterValue", "RequirementsContainerParameterValue", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -17176,21 +17176,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "group": new PropertyMetadata("group", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "group": new PropertyMetadata("group", "RequirementsGroup", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterValue": new PropertyMetadata("parameterValue", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
-      "requirement": new PropertyMetadata("requirement", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterValue": new PropertyMetadata("parameterValue", "RequirementsContainerParameterValue", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "requirement": new PropertyMetadata("requirement", "Requirement", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -17346,26 +17346,26 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "approvedBy": new PropertyMetadata("approvedBy", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "approvedBy": new PropertyMetadata("approvedBy", "Approval", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classification": new PropertyMetadata("classification", "AnnotationClassificationKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "EngineeringModelDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "ModellingThingReference", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "ModellingThingReference", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "solution": new PropertyMetadata("solution", "string", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "solution": new PropertyMetadata("solution", "Solution", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "sourceAnnotation": new PropertyMetadata("sourceAnnotation", "ModellingAnnotationItem", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "AnnotationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "title": new PropertyMetadata("title", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -17529,18 +17529,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "ruleVerification": new PropertyMetadata("ruleVerification", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "ruleVerification": new PropertyMetadata("ruleVerification", "RuleVerification", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
@@ -17687,8 +17687,8 @@ export module Metadata {
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "description": new PropertyMetadata("description", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
@@ -17823,12 +17823,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "value": new PropertyMetadata("value", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
@@ -17959,12 +17959,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -18111,16 +18111,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "page": new PropertyMetadata("page", "string", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "page": new PropertyMetadata("page", "Page", 0, "*", AggregationKind.Composite, false, true, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -18262,12 +18262,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fillColor": new PropertyMetadata("fillColor", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fillColor": new PropertyMetadata("fillColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fillOpacity": new PropertyMetadata("fillOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontBold": new PropertyMetadata("fontBold", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "fontColor": new PropertyMetadata("fontColor", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "fontColor": new PropertyMetadata("fontColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontItalic": new PropertyMetadata("fontItalic", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontName": new PropertyMetadata("fontName", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "fontSize": new PropertyMetadata("fontSize", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
@@ -18277,10 +18277,10 @@ export module Metadata {
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "strokeColor": new PropertyMetadata("strokeColor", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "strokeColor": new PropertyMetadata("strokeColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "strokeOpacity": new PropertyMetadata("strokeOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "strokeWidth": new PropertyMetadata("strokeWidth", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "usedColor": new PropertyMetadata("usedColor", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "usedColor": new PropertyMetadata("usedColor", "Color", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -18436,14 +18436,14 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "value": new PropertyMetadata("value", "string", 1, "*", AggregationKind.None, false, true, true, false, false, true, "1.0.0"),
     };
 
@@ -18577,21 +18577,21 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "allPossibleScale": new PropertyMetadata("allPossibleScale", "string", 0, "*", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "allPossibleScale": new PropertyMetadata("allPossibleScale", "MeasurementScale", 0, "*", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "defaultScale": new PropertyMetadata("defaultScale", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "defaultScale": new PropertyMetadata("defaultScale", "MeasurementScale", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "numberOfValues": new PropertyMetadata("numberOfValues", "number", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "possibleScale": new PropertyMetadata("possibleScale", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "possibleScale": new PropertyMetadata("possibleScale", "MeasurementScale", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "quantityDimensionExponent": new PropertyMetadata("quantityDimensionExponent", "string", 0, "*", AggregationKind.None, false, true, false, true, false, false, "1.0.0"),
       "quantityDimensionExpression": new PropertyMetadata("quantityDimensionExpression", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "quantityDimensionSymbol": new PropertyMetadata("quantityDimensionSymbol", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -18752,12 +18752,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -18904,29 +18904,29 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "annotation": new PropertyMetadata("annotation", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
+      "annotation": new PropertyMetadata("annotation", "SiteDirectoryDataAnnotation", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.1.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "defaultParticipantRole": new PropertyMetadata("defaultParticipantRole", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "defaultPersonRole": new PropertyMetadata("defaultPersonRole", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "domain": new PropertyMetadata("domain", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "domainGroup": new PropertyMetadata("domainGroup", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "defaultParticipantRole": new PropertyMetadata("defaultParticipantRole", "ParticipantRole", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "defaultPersonRole": new PropertyMetadata("defaultPersonRole", "PersonRole", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "domain": new PropertyMetadata("domain", "DomainOfExpertise", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "domainGroup": new PropertyMetadata("domainGroup", "DomainOfExpertiseGroup", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "lastModifiedOn": new PropertyMetadata("lastModifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "logEntry": new PropertyMetadata("logEntry", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "model": new PropertyMetadata("model", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "logEntry": new PropertyMetadata("logEntry", "SiteLogEntry", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "model": new PropertyMetadata("model", "EngineeringModelSetup", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "naturalLanguage": new PropertyMetadata("naturalLanguage", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "organization": new PropertyMetadata("organization", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "participantRole": new PropertyMetadata("participantRole", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "person": new PropertyMetadata("person", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "personRole": new PropertyMetadata("personRole", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "naturalLanguage": new PropertyMetadata("naturalLanguage", "NaturalLanguage", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "organization": new PropertyMetadata("organization", "Organization", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "participantRole": new PropertyMetadata("participantRole", "ParticipantRole", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "person": new PropertyMetadata("person", "Person", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "personRole": new PropertyMetadata("personRole", "PersonRole", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "siteReferenceDataLibrary": new PropertyMetadata("siteReferenceDataLibrary", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "siteReferenceDataLibrary": new PropertyMetadata("siteReferenceDataLibrary", "SiteReferenceDataLibrary", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -19097,18 +19097,18 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Person", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "discussion": new PropertyMetadata("discussion", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "discussion": new PropertyMetadata("discussion", "SiteDirectoryDataDiscussionItem", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "relatedThing": new PropertyMetadata("relatedThing", "string", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "primaryAnnotatedThing": new PropertyMetadata("primaryAnnotatedThing", "SiteDirectoryThingReference", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "relatedThing": new PropertyMetadata("relatedThing", "SiteDirectoryThingReference", 1, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -19251,16 +19251,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Person", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "replyTo": new PropertyMetadata("replyTo", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "replyTo": new PropertyMetadata("replyTo", "DiscussionItem", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -19398,12 +19398,12 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "referencedRevisionNumber": new PropertyMetadata("referencedRevisionNumber", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "referencedThing": new PropertyMetadata("referencedThing", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "referencedThing": new PropertyMetadata("referencedThing", "Thing", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -19535,13 +19535,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "affectedItemIid": new PropertyMetadata("affectedItemIid", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "author": new PropertyMetadata("author", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Person", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "level": new PropertyMetadata("level", "LogLevelKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -19686,31 +19686,31 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "baseQuantityKind": new PropertyMetadata("baseQuantityKind", "string", 0, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
-      "baseUnit": new PropertyMetadata("baseUnit", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "baseQuantityKind": new PropertyMetadata("baseQuantityKind", "QuantityKind", 0, "*", AggregationKind.None, false, true, false, false, false, true, "1.0.0"),
+      "baseUnit": new PropertyMetadata("baseUnit", "MeasurementUnit", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "constant": new PropertyMetadata("constant", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "definedCategory": new PropertyMetadata("definedCategory", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "fileType": new PropertyMetadata("fileType", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "glossary": new PropertyMetadata("glossary", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "constant": new PropertyMetadata("constant", "Constant", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definedCategory": new PropertyMetadata("definedCategory", "Category", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "fileType": new PropertyMetadata("fileType", "FileType", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "glossary": new PropertyMetadata("glossary", "Glossary", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "parameterType": new PropertyMetadata("parameterType", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "referenceSource": new PropertyMetadata("referenceSource", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "requiredRdl": new PropertyMetadata("requiredRdl", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "parameterType": new PropertyMetadata("parameterType", "ParameterType", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "referenceSource": new PropertyMetadata("referenceSource", "ReferenceSource", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "requiredRdl": new PropertyMetadata("requiredRdl", "SiteReferenceDataLibrary", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "rule": new PropertyMetadata("rule", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "scale": new PropertyMetadata("scale", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "rule": new PropertyMetadata("rule", "Rule", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "scale": new PropertyMetadata("scale", "MeasurementScale", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "unitPrefix": new PropertyMetadata("unitPrefix", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "unitPrefix": new PropertyMetadata("unitPrefix", "UnitPrefix", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -19887,16 +19887,16 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "author": new PropertyMetadata("author", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "author": new PropertyMetadata("author", "Participant", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
     };
 
@@ -20033,22 +20033,22 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "allPossibleScale": new PropertyMetadata("allPossibleScale", "string", 0, "*", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "allPossibleScale": new PropertyMetadata("allPossibleScale", "MeasurementScale", 0, "*", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "defaultScale": new PropertyMetadata("defaultScale", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "general": new PropertyMetadata("general", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "defaultScale": new PropertyMetadata("defaultScale", "MeasurementScale", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "general": new PropertyMetadata("general", "QuantityKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "numberOfValues": new PropertyMetadata("numberOfValues", "number", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "possibleScale": new PropertyMetadata("possibleScale", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "possibleScale": new PropertyMetadata("possibleScale", "MeasurementScale", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "quantityDimensionExponent": new PropertyMetadata("quantityDimensionExponent", "string", 0, "*", AggregationKind.None, false, true, false, true, false, false, "1.0.0"),
       "quantityDimensionExpression": new PropertyMetadata("quantityDimensionExpression", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "quantityDimensionSymbol": new PropertyMetadata("quantityDimensionSymbol", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -20211,19 +20211,19 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "stakeholderValue": new PropertyMetadata("stakeholderValue", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "stakeholderValue": new PropertyMetadata("stakeholderValue", "StakeholderValue", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -20366,13 +20366,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -20518,23 +20518,23 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "goal": new PropertyMetadata("goal", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "goal": new PropertyMetadata("goal", "Goal", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "requirement": new PropertyMetadata("requirement", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "requirement": new PropertyMetadata("requirement", "Requirement", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "settings": new PropertyMetadata("settings", "string", 1, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "settings": new PropertyMetadata("settings", "StakeHolderValueMapSettings", 1, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "stakeholderValue": new PropertyMetadata("stakeholderValue", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueGroup": new PropertyMetadata("valueGroup", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "stakeholderValue": new PropertyMetadata("stakeholderValue", "StakeholderValue", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "valueGroup": new PropertyMetadata("valueGroup", "ValueGroup", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -20687,14 +20687,14 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "goalToValueGroupRelationship": new PropertyMetadata("goalToValueGroupRelationship", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "goalToValueGroupRelationship": new PropertyMetadata("goalToValueGroupRelationship", "BinaryRelationshipRule", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "stakeholderValueToRequirementRelationship": new PropertyMetadata("stakeholderValueToRequirementRelationship", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "valueGroupToStakeholderValueRelationship": new PropertyMetadata("valueGroupToStakeholderValueRelationship", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "stakeholderValueToRequirementRelationship": new PropertyMetadata("stakeholderValueToRequirementRelationship", "BinaryRelationshipRule", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "valueGroupToStakeholderValueRelationship": new PropertyMetadata("valueGroupToStakeholderValueRelationship", "BinaryRelationshipRule", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
     };
 
     /**
@@ -20827,8 +20827,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
@@ -20963,12 +20963,12 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -21115,13 +21115,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -21275,17 +21275,17 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "content": new PropertyMetadata("content", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "createdOn": new PropertyMetadata("createdOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "languageCode": new PropertyMetadata("languageCode", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "shortName": new PropertyMetadata("shortName", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
@@ -21427,13 +21427,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -21588,13 +21588,13 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "exponent": new PropertyMetadata("exponent", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "unit": new PropertyMetadata("unit", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "unit": new PropertyMetadata("unit", "MeasurementUnit", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -21724,13 +21724,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "conversionFactor": new PropertyMetadata("conversionFactor", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isDeprecated": new PropertyMetadata("isDeprecated", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
@@ -21880,8 +21880,8 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
@@ -22017,18 +22017,18 @@ export module Metadata {
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "executedOn": new PropertyMetadata("executedOn", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "isActive": new PropertyMetadata("isActive", "boolean", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
-      "owner": new PropertyMetadata("owner", "string", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
+      "owner": new PropertyMetadata("owner", "DomainOfExpertise", 1, "1", AggregationKind.None, false, false, false, true, false, false, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "rule": new PropertyMetadata("rule", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "rule": new PropertyMetadata("rule", "Rule", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "status": new PropertyMetadata("status", "RuleVerificationStatusKind", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "violation": new PropertyMetadata("violation", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, false, "1.0.0"),
+      "violation": new PropertyMetadata("violation", "RuleViolation", 0, "*", AggregationKind.Composite, false, false, false, false, false, false, "1.0.0"),
     };
 
     /**
@@ -22167,13 +22167,13 @@ export module Metadata {
      * Gets property metadata map
      */
     public propertyMetaData: { [property: string] : PropertyMetadata } = {
-      "alias": new PropertyMetadata("alias", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "category": new PropertyMetadata("category", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "alias": new PropertyMetadata("alias", "Alias", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "category": new PropertyMetadata("category", "Category", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "definition": new PropertyMetadata("definition", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
-      "excludedDomain": new PropertyMetadata("excludedDomain", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "excludedPerson": new PropertyMetadata("excludedPerson", "string", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "hyperLink": new PropertyMetadata("hyperLink", "string", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "definition": new PropertyMetadata("definition", "Definition", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
+      "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
+      "hyperLink": new PropertyMetadata("hyperLink", "HyperLink", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
