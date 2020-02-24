@@ -2115,14 +2115,14 @@ export module Metadata {
       "classKind": new PropertyMetadata("classKind", "ClassKind", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
-      "height": new PropertyMetadata("height", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "height": new PropertyMetadata("height", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "width": new PropertyMetadata("width", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "x": new PropertyMetadata("x", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "y": new PropertyMetadata("y", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "width": new PropertyMetadata("width", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "x": new PropertyMetadata("x", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "y": new PropertyMetadata("y", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -5350,7 +5350,7 @@ export module Metadata {
       "localStyle": new PropertyMetadata("localStyle", "OwnedStyle", 0, "1", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "resolution": new PropertyMetadata("resolution", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "resolution": new PropertyMetadata("resolution", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "sharedStyle": new PropertyMetadata("sharedStyle", "SharedStyle", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
     };
@@ -11897,12 +11897,12 @@ export module Metadata {
       "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "fillColor": new PropertyMetadata("fillColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "fillOpacity": new PropertyMetadata("fillOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "fillOpacity": new PropertyMetadata("fillOpacity", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontBold": new PropertyMetadata("fontBold", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontColor": new PropertyMetadata("fontColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontItalic": new PropertyMetadata("fontItalic", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontName": new PropertyMetadata("fontName", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "fontSize": new PropertyMetadata("fontSize", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "fontSize": new PropertyMetadata("fontSize", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontStrokeThrough": new PropertyMetadata("fontStrokeThrough", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontUnderline": new PropertyMetadata("fontUnderline", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -11910,8 +11910,8 @@ export module Metadata {
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "strokeColor": new PropertyMetadata("strokeColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "strokeOpacity": new PropertyMetadata("strokeOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "strokeWidth": new PropertyMetadata("strokeWidth", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "strokeOpacity": new PropertyMetadata("strokeOpacity", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "strokeWidth": new PropertyMetadata("strokeWidth", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "usedColor": new PropertyMetadata("usedColor", "Color", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
@@ -14658,8 +14658,8 @@ export module Metadata {
       "modifiedOn": new PropertyMetadata("modifiedOn", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
-      "x": new PropertyMetadata("x", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "y": new PropertyMetadata("y", "float", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "x": new PropertyMetadata("x", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
+      "y": new PropertyMetadata("y", "number", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
     };
 
     /**
@@ -18265,12 +18265,12 @@ export module Metadata {
       "excludedDomain": new PropertyMetadata("excludedDomain", "DomainOfExpertise", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "excludedPerson": new PropertyMetadata("excludedPerson", "Person", 0, "*", AggregationKind.None, false, false, false, false, false, true, "1.1.0"),
       "fillColor": new PropertyMetadata("fillColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "fillOpacity": new PropertyMetadata("fillOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "fillOpacity": new PropertyMetadata("fillOpacity", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontBold": new PropertyMetadata("fontBold", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontColor": new PropertyMetadata("fontColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontItalic": new PropertyMetadata("fontItalic", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontName": new PropertyMetadata("fontName", "string", 0, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
-      "fontSize": new PropertyMetadata("fontSize", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "fontSize": new PropertyMetadata("fontSize", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontStrokeThrough": new PropertyMetadata("fontStrokeThrough", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "fontUnderline": new PropertyMetadata("fontUnderline", "boolean", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "iid": new PropertyMetadata("iid", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
@@ -18278,8 +18278,8 @@ export module Metadata {
       "name": new PropertyMetadata("name", "string", 1, "1", AggregationKind.None, false, false, false, false, false, true, "1.0.0"),
       "revisionNumber": new PropertyMetadata("revisionNumber", "number", 1, "1", AggregationKind.None, true, false, false, false, false, true, "1.0.0"),
       "strokeColor": new PropertyMetadata("strokeColor", "Color", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "strokeOpacity": new PropertyMetadata("strokeOpacity", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
-      "strokeWidth": new PropertyMetadata("strokeWidth", "float", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "strokeOpacity": new PropertyMetadata("strokeOpacity", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
+      "strokeWidth": new PropertyMetadata("strokeWidth", "number", 0, "1", AggregationKind.None, false, false, false, false, true, true, "1.0.0"),
       "usedColor": new PropertyMetadata("usedColor", "Color", 0, "*", AggregationKind.Composite, false, false, false, false, false, true, "1.0.0"),
     };
 
