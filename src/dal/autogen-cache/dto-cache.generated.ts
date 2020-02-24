@@ -1,7 +1,7 @@
 ﻿/**
  * @file		dto-cache.generated.ts
  * @company		RHEA System S.A.
- * @copyright  Copyright (c) 2019  RHEA System S.A.
+ * @copyright  Copyright (c) 2020  RHEA System S.A.
  * @summary		This is an auto-generated class. Any manual changes on this file will be overwritten!
  */
 
@@ -720,7 +720,7 @@ export class DtoCache {
   private valueGroupCache: { [cacheId: string]: Dto.ValueGroup };
 
   /**
-   * The map of cache that associates a classkind to the corresponding cache(s)
+   * The map of cache that associates a classKind to the corresponding cache(s)
    */
   private cacheMap: { [classKind: string]: any };
 
@@ -894,7 +894,7 @@ export class DtoCache {
       "Citation": [this.citationCache],
       "Color": [this.colorCache],
       "CommonFileStore": [this.commonFileStoreCache],
-      "CompoundParameterType": [this.compoundParameterTypeCache, this.arrayParameterTypeCache],
+      "CompoundParameterType": [this.arrayParameterTypeCache, this.compoundParameterTypeCache],
       "Constant": [this.constantCache],
       "ContractChangeNotice": [this.contractChangeNoticeCache],
       "ContractDeviation": [this.changeRequestCache, this.requestForDeviationCache, this.requestForWaiverCache],
@@ -995,7 +995,7 @@ export class DtoCache {
       "Publication": [this.publicationCache],
       "QuantityKind": [this.derivedQuantityKindCache, this.simpleQuantityKindCache, this.specializedQuantityKindCache],
       "QuantityKindFactor": [this.quantityKindFactorCache],
-      "RatioScale": [this.ratioScaleCache, this.cyclicRatioScaleCache],
+      "RatioScale": [this.cyclicRatioScaleCache, this.ratioScaleCache],
       "ReferenceDataLibrary": [this.modelReferenceDataLibraryCache, this.siteReferenceDataLibraryCache],
       "ReferencerRule": [this.referencerRuleCache],
       "ReferenceSource": [this.referenceSourceCache],
@@ -1047,7 +1047,7 @@ export class DtoCache {
       "UnitPrefix": [this.unitPrefixCache],
       "UserPreference": [this.userPreferenceCache],
       "UserRuleVerification": [this.userRuleVerificationCache],
-      "ValueGroup": [this.valueGroupCache]
+      "ValueGroup": [this.valueGroupCache],
     };
   }
 
@@ -1109,7 +1109,8 @@ export class DtoCache {
 
   /**
    * Retrieve all the Things of a specific type that are currently in the caches
-   * @param classKind The classkind of the things to retrieve
+   * @param classKind The classKind of the things to retrieve
+   * @param iterationId the iteration id the thing is contained in
    * @returns The array of Things
    */
   public retrieve<T extends Dto.Thing>(classKind: Dto.ClassKind, iterationId: string): Array<T> {
@@ -1122,8 +1123,8 @@ export class DtoCache {
   }
 
   /**
-   * Get the thing of a specific classkind and the provided id in the cache
-   * @param classKind the classkind
+   * Get the thing of a specific classKind and the provided id in the cache
+   * @param classKind the classKind
    * @param id the id of the thing
    * @param iterationId the iteration id of the thing is contained in
    */
@@ -1183,7 +1184,7 @@ export class DtoCache {
   }
 
   /**
-   * Add or update thecache with a thing
+   * Add or update the cache with a thing
    * @param dto the thing to add or update
    * @returns A value indicating whether the operation succeeded
    */
@@ -1286,7 +1287,7 @@ export class DtoCache {
 
   /**
    * Compute the things that are actually removed and clear them from the cache
-   * @param classKind the classkind of the things
+   * @param classKind the classKind of the things
    * @param ids the ids of the things
    * @param iterationId the iteration id that contains the things to check
    */
@@ -1304,8 +1305,8 @@ export class DtoCache {
   }
 
   /**
-   * Cascase remove a thing
-   * @param classKind The classkind of the thing to remove
+   * Cascade remove a thing
+   * @param classKind The classKind of the thing to remove
    * @param id The id of the thing to remove
    * @param iterationId The id of the iteration the thing is contained in
    */
@@ -1340,7 +1341,7 @@ export class DtoCache {
       }
     }
 
-    // we have the concrete classkind. only one cache should be returned
+    // we have the concrete classKind, only one cache should be returned
     const concreteCache = this.cacheMap[Dto.ClassKind[removedThing.classKind]][0];
     console.log("removed: " + classKind + " " + id);
 
@@ -1401,10 +1402,10 @@ export class DtoCache {
   }
 
   /**
-   * Find the thing of a specific classkind and the provided ids in the cache
-   * @param classKind the classkind
+   * Find the thing of a specific classKind and the provided ids in the cache
+   * @param classKind the classKind
    * @param id the id of the thing
-   * @param iterationId the iteration id the theing is contained in
+   * @param iterationId the iteration id the thing is contained in
    */
   private findInCache(classKind: string, id: string, iterationId: string): Dto.Thing {
     const caches = this.cacheMap[classKind];
